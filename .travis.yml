@@ -24,6 +24,8 @@ matrix:
 
 before_install:
   - npm config set spin false
+  - npm install -g pr-bumper
+  - pr-bumper check
 
 install:
   - npm install
@@ -31,3 +33,6 @@ install:
 
 script:
   - ember try $EMBER_TRY_SCENARIO test
+
+before_deploy:
+  - pr-bumper bump
