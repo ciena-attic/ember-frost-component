@@ -42,3 +42,13 @@ script:
 
 before_deploy:
   - pr-bumper bump
+
+deploy:
+  provider: npm
+  email: dahl.matthew@gmail.com
+  skip_cleanup: true
+  api_key:
+    secure: X8R9zeYnrNGnylJ7erwIFnCcuk7QcdtxB+HgR8RL+KtxeDwBCprsAP3/MR7HARVTjIoOxdlNT4EQ4qOKLhOrzaaIivKw8WABRYRao17cDWJNUqo+QZ/bRdSUjhlu/B1iTWhiXLVZYYfkAcM6RHOvZq6n/7Mv3SQsvi/y8H8K6VcsC2RcxG+vX1Je1KT8OJubWz5LmGwIq7EbFMv0GQkhGVoOrSpWpZDIIlnSdvsx/OPW0oCWfmdQ8zOe75ipszrLGlZkGPd1SlnQ+mR3mipHQ41wg7Mq7NwY6VEIbTFHdvHDjgpdaH4rz3bzQmHZUeFe0ypccgcjSdawIWV22y2mmU7y3B6PddiiN6ori7tPcIpAe6fQMUXFojs8a9Xj252YDnf9sPL0gok9MhXEIwPGpnAnDn4he1vpniMQql7CcfisXpn/CGCbKJxgbpIxMDM6jTeFVMoyy+uBXZhL2py7CFoJSWKNSxW2pTXJvm4yCBHdmVwRbkJ0sGr+BPsww4idJ79F5gKA2tW/WY89dbAzp4k3QSoQ0azEDGW1J60kSqS1igKbDnjjG/7atUm7m9I36GSmEHyjqU218+/dsRIChZSvBCcGWgDoK8zh/4EoJ8oed2bryiglwHexBnwrOD4IPkDfCfw16LnnLj/w2kvi226DpVcoqRyUbfqqlZVdU9M=
+  on:
+    branch: master
+    tags: false
