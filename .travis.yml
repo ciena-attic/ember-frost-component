@@ -1,4 +1,3 @@
----
 language: node_js
 node_js:
   - "5.0"
@@ -15,11 +14,14 @@ cache:
     - node_modules
 
 env:
-  - EMBER_TRY_SCENARIO=default
-  - EMBER_TRY_SCENARIO=ember-1-13
-  - EMBER_TRY_SCENARIO=ember-release
-  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
+  matrix:
+    - EMBER_TRY_SCENARIO=default
+    - EMBER_TRY_SCENARIO=ember-1-13
+    - EMBER_TRY_SCENARIO=ember-release
+    - EMBER_TRY_SCENARIO=ember-beta
+    - EMBER_TRY_SCENARIO=ember-canary
+  global:
+    secure: rE0uRP4z0WyeXcU/g9QlIUbIltOH7s57CtKqQWSpVu4avarg9ou38bBoHD2ehk5ZmlrEgDnKdWQ7wI84iEO0t4Uzbb2I1LTLWb2Fe3RxIkK6+kgFCCFrYqnwMFFJPBYqYMWZS7OrTKHDTK9eaLO/Sh6dAUyApj4UfGMT97dSE8TRSXFagfGtGEXjyuRzIr3HLwGgzfoYYQbsz+pS2dZrJzi1DsX5cGYps9CdwEy3bO6nG0gtxPXV3MkzVZE11C+OoSsJpny1tbSmT1pNrfcmMlZKm5h+t9goe95qFC/lONmdy9fi/FLj0P4JVGniI2GjyualaLZ4h8Rrvg5RNDnEGkI5qqf09w0i6DYet2WgJQB86piGqM7RUP8mh2vwYc0/CxnG5y/FTFEx+/9vM2KLMQYypG3cfa1iRkTQymb1xM5gzwc978HnBYG9duN05WnbGWjrsBzUqTq0nMbLlPxMRxEhNR/Fm7DvA7RAfgEGAxhLlReUfS1kL8U7ZbuGjIdJvXLwEdxGMkvBszhqEvV7WHiT9dsNNusfjMShZNJKHS9q0mRCSlZq1SOfLGIQld2kYvYYHYfkS3JsE1zzoKtPJCAxk4Ug7ZKCWMR/mU19dQyzZ5nm3RRU14Hxfbv3gf3RPzxQQsiGcbH4xcuNAzqSmZ+4cCJs3Yx/+MqtHkSLE+4=
 
 matrix:
   fast_finish: true
