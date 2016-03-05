@@ -1,4 +1,4 @@
-# Ember-addon-ci-test
+# ember-prop-types
 
 This README outlines the details of collaborating on this Ember addon.
 

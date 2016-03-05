@@ -2,5 +2,5 @@
 'use strict'
 
 module.exports = {
-  name: 'ember-addon-ci-test'
+  name: 'ember-prop-types'
 }
