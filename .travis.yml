@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - "5.0"
-  - "5.6"
+  - '5.0'
+  - '5.6'
 
 sudo: false
 
@@ -15,6 +15,7 @@ cache:
 
 env:
   matrix:
+    - CXX=g++-4.8
     - EMBER_TRY_SCENARIO=default
     - EMBER_TRY_SCENARIO=ember-1-13
     - EMBER_TRY_SCENARIO=ember-release
@@ -22,6 +23,13 @@ env:
     - EMBER_TRY_SCENARIO=ember-canary
   global:
     secure: rE0uRP4z0WyeXcU/g9QlIUbIltOH7s57CtKqQWSpVu4avarg9ou38bBoHD2ehk5ZmlrEgDnKdWQ7wI84iEO0t4Uzbb2I1LTLWb2Fe3RxIkK6+kgFCCFrYqnwMFFJPBYqYMWZS7OrTKHDTK9eaLO/Sh6dAUyApj4UfGMT97dSE8TRSXFagfGtGEXjyuRzIr3HLwGgzfoYYQbsz+pS2dZrJzi1DsX5cGYps9CdwEy3bO6nG0gtxPXV3MkzVZE11C+OoSsJpny1tbSmT1pNrfcmMlZKm5h+t9goe95qFC/lONmdy9fi/FLj0P4JVGniI2GjyualaLZ4h8Rrvg5RNDnEGkI5qqf09w0i6DYet2WgJQB86piGqM7RUP8mh2vwYc0/CxnG5y/FTFEx+/9vM2KLMQYypG3cfa1iRkTQymb1xM5gzwc978HnBYG9duN05WnbGWjrsBzUqTq0nMbLlPxMRxEhNR/Fm7DvA7RAfgEGAxhLlReUfS1kL8U7ZbuGjIdJvXLwEdxGMkvBszhqEvV7WHiT9dsNNusfjMShZNJKHS9q0mRCSlZq1SOfLGIQld2kYvYYHYfkS3JsE1zzoKtPJCAxk4Ug7ZKCWMR/mU19dQyzZ5nm3RRU14Hxfbv3gf3RPzxQQsiGcbH4xcuNAzqSmZ+4cCJs3Yx/+MqtHkSLE+4=
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 
 matrix:
   fast_finish: true
@@ -51,4 +59,6 @@ deploy:
     secure: X8R9zeYnrNGnylJ7erwIFnCcuk7QcdtxB+HgR8RL+KtxeDwBCprsAP3/MR7HARVTjIoOxdlNT4EQ4qOKLhOrzaaIivKw8WABRYRao17cDWJNUqo+QZ/bRdSUjhlu/B1iTWhiXLVZYYfkAcM6RHOvZq6n/7Mv3SQsvi/y8H8K6VcsC2RcxG+vX1Je1KT8OJubWz5LmGwIq7EbFMv0GQkhGVoOrSpWpZDIIlnSdvsx/OPW0oCWfmdQ8zOe75ipszrLGlZkGPd1SlnQ+mR3mipHQ41wg7Mq7NwY6VEIbTFHdvHDjgpdaH4rz3bzQmHZUeFe0ypccgcjSdawIWV22y2mmU7y3B6PddiiN6ori7tPcIpAe6fQMUXFojs8a9Xj252YDnf9sPL0gok9MhXEIwPGpnAnDn4he1vpniMQql7CcfisXpn/CGCbKJxgbpIxMDM6jTeFVMoyy+uBXZhL2py7CFoJSWKNSxW2pTXJvm4yCBHdmVwRbkJ0sGr+BPsww4idJ79F5gKA2tW/WY89dbAzp4k3QSoQ0azEDGW1J60kSqS1igKbDnjjG/7atUm7m9I36GSmEHyjqU218+/dsRIChZSvBCcGWgDoK8zh/4EoJ8oed2bryiglwHexBnwrOD4IPkDfCfw16LnnLj/w2kvi226DpVcoqRyUbfqqlZVdU9M=
   on:
     branch: master
+    condition: "$(ember version | grep version | sed -e 's/version: //g') = '2.4.1'"
+    node: '5.6'
     tags: false
