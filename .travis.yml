@@ -47,6 +47,7 @@ install:
   - bower install
 
 script:
+  - npm run lint
   - ember try $EMBER_TRY_SCENARIO test
 
 before_deploy:
