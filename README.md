@@ -1,5 +1,7 @@
 # ember-prop-types
 
+[![Continuous Integration](https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square)](https://travis-ci.org/sandersky/ember-prop-types)
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
