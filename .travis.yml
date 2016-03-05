@@ -11,6 +11,7 @@ branches:
 
 cache:
   directories:
+    - bower_components
     - node_modules
 
 env:
@@ -22,8 +23,7 @@ env:
     - EMBER_TRY_SCENARIO=ember-canary
   global:
     - CXX=g++-4.8
-    - GH_REF: github.com/sandersky/ember-prop-types.git
-    - secure: "i+suBCdCDVDPSD83uCRZagABjWFhOMu3W5q/EFCEBJRTB/teOtDKntkLdZFpcDr3boy1kI8RNwkMQFMpma2lb99sKRo+DQ/nWPf2Aup9KmWas2dV7p7bHZg0W469pCkTciZYAPiVEvBbJqYCQ9W7I83p6ZVgauLYA3XwI64v19PafPIopVTq750WmhFFOdlU+Oi5anwIEoz/PHRqLeTP30E4I21whtFnARUbeNoawQHzgHGsjvnDrqkqVqHo1xOEAeSusIAwUDKaBrhBj8MdQddqoC7j5UDMz0SlgkRiNw34YsoaP81JTKyN0P6hPn7rmk/JN8DFM0hm+k5kteN9b7zNUwghkiX24Uu4JwB2LjQlNwYlX3aIcPCGU8E6ns9yIDbsjQ3ECxjM1GR2kCYs/akAcU1VE0N0eh0k32yM84Iu38FwWsWcEQJG4AEz2du7IbfRXMi/2RY6L6Z632q2fpKYi3w+vVel5m3/5Rs4MhronkETJssQyct6QV5X79D+SA9IEU4hLZCBeE7VwrnbFwnfhmjK9VY118pqDJcbvJVxfybn74hM12fTGFpbIZr9Uxp6wWFAdO0mr4Ap2KbdU/EzAS5NFL070/ei3O1FzYXoE4HyQ3cI29cTFb3TRQPVBOolx/abtqTqipsLIXyXEE8OKDSMESYfmylrqtDXgIg="
+    - secure: "SYF34alow+5UDRfeKp7KNH+IHJy/pvW/948uRRPB61IlLmlGZDKP5Zw/PDem/ndAa4Jum04a+SKa6EN0P3ZfxvNwlZq81IeRd8Xd3hot/DaSzv52IjKk1gA7mq8/zuRGJMc5BkmaqMM3rgOwZzLQl2VrdWqtE5Rh2fbGirnDp5dH6E3T9+hNTo49pD8S22npWeWLmH93ipZt1dVTjxWaNp+PsP3LXnH6c5/GCIweREgnUaug4er/Iuzb3VaXCXEM0lUzmGipa3l8p6Fkp01nMGy28NYkdyFT3WoXVK2cYS1HBx7aCGn46jpGaSxCT84J98qZDs3LLMxX9ICtcBYa7+LE4jKe/zpjkdQQXOi8+0eJKeAvPPNzdUrTtupgDf9WN63qwL3vrh9HEy9yLRCjayuj7l8KKeKsqXko58Fp0Dr80KCm9e7+xB8oi/zHX2qPJDKD1DXQSzeWX4bkiNZBaKrlgaaS3Ad8DVeuyIJjun/7OPfKLvFg9htMKsqXyE6dNmK4t5YPSBMDVlb4q1OFwtsluMDf2lhaj3KEixUA+cAxyyBLKvuQl1NPeWs/C5ryLv2/U/6s/LkIHEVQMF0f27RDVCeHrGJv+r6z7TtesXwEdiSo/mLYCIxfndWMF4sW5C5rgDs744/wS1ZX1Eni8CLlxxBGonaJiOW70AV3t2c="
 
 addons:
   apt:
