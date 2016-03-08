@@ -1,5 +1,5 @@
 {
-  "name": "ember-prop-types",
+  "name": "ember-frost-component",
   "dependencies": {
     "ember": "~2.4.1",
     "ember-cli-shims": "0.1.0",
@@ -8,5 +8,8 @@
     "chai": "~2.3.0",
     "ember-mocha-adapter": "~0.3.1",
     "ember-mocha": "~0.8.8"
+  },
+  "devDependencies": {
+    "sinonjs": "~1.17.1"
   }
 }
