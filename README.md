@@ -1,28 +1,53 @@
-# ember-prop-types
+# ember-frost-component
 
-[![Continuous Integration](https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square)](https://travis-ci.org/sandersky/ember-prop-types)
-
-This README outlines the details of collaborating on this Ember addon.
+This project aims to make a better Ember  base component to extend.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```bash
+ember install ember-frost-component
+```
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+### Better Components
 
-## Running Tests
+Below is an example of a component that extends the component from this addon:
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```js
+import FrostComponent, {PropTypes} from 'ember-frost-component'
 
-## Building
+export default FrostComponent.extend({
+  propTypes: {
+    foo: PropTypes.string,
+    bar: PropTypes.number.isRequired,
+    baz: PropTypes.oneOf([
+      PropTypes.bool,
+      PropTypes.string
+    ])
+  },
 
-* `ember build`
+  getDefaultProps () {
+    return {
+      foo: 'This is going to be highly profitable'
+    }
+  }
+})
+```
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+#### Property Validation
+
+The idea of *propTypes* comes from the world of React and is implemented to have an almost identical API in the Ember world. Below is a list of possible *propTypes* to validate against.
+
+* array
+* bool
+* EmberObject
+* func
+* number
+* object
+* oneOf
+* string
+
+#### Default Property Values
+
+In Ember you can set default property values on a component class itself but sometimes this bites you when you end up with a property containing an array of selected items or a state object, where all instances of the component end up sharing that same array or object. Uncovering this issue is not always an easy task and so *getDefaultProps* was also implemented (thanks to the React team for this concept as well).

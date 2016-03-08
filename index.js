@@ -1,6 +1,5 @@
-/* jshint node: true */
 'use strict'
 
 module.exports = {
-  name: 'ember-prop-types'
+  name: 'ember-frost-component'
 }
